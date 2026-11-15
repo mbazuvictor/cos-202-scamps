@@ -1,0 +1,30 @@
+SCAPMS,2
+P,1001,General,Chidi Okeke,34,0803-555-0101,Persistent cough
+P,1002,General,Amina Bello,28,0805-555-0102,Headache
+P,1003,General,Tunde Adeyemi,52,0806-555-0103,Blood pressure check
+P,1004,General,Ngozi Eze,41,0807-555-0104,Back pain
+P,1005,General,Ibrahim Musa,23,0808-555-0105,Malaria symptoms
+P,1006,General,Grace Okafor,67,0809-555-0106,Routine checkup
+P,1007,Emergency,Emeka Nwosu,45,0810-555-0107,Chest pain
+P,1008,Emergency,Fatima Yusuf,8,0811-555-0108,High fever - mother Hauwa
+P,1009,Emergency,Samuel Adebayo,31,0812-555-0109,Road accident injury
+P,1010,FollowUp,Blessing Udo,36,0813-555-0110,2026-11-01
+P,1011,FollowUp,Kelechi Obi,59,0814-555-0111,2026-10-16
+P,1012,FollowUp,Halima Sani,19,0815-555-0112,2026-11-08
+A,1,1001,2026-10-26,Completed
+A,2,1001,2026-11-03,Completed
+A,3,1001,2026-11-12,Completed
+A,4,1001,2026-11-16,Pending
+A,5,1002,2026-11-06,Completed
+A,6,1002,2026-11-11,Completed
+A,16,1002,2026-11-17,Cancelled
+A,7,1003,2026-11-09,Completed
+A,11,1004,2026-11-15,Pending
+A,12,1005,2026-11-18,Pending
+A,8,1006,2026-11-13,Completed
+A,15,1007,2026-11-15,Pending
+A,17,1008,2026-11-19,Cancelled
+A,9,1010,2026-11-05,Completed
+A,10,1010,2026-11-10,Completed
+A,13,1011,2026-11-16,Pending
+A,14,1012,2026-11-20,Pending
