@@ -20,6 +20,9 @@ add_library(scapms_core STATIC
     utils/DatabaseManager.cpp utils/DatabaseManager.h
     utils/FileHandler.cpp utils/FileHandler.h
     utils/IDGenerator.cpp utils/IDGenerator.h
+    controller/AppointmentController.cpp controller/AppointmentController.h
+    controller/ClinicManager.cpp controller/ClinicManager.h
+    controller/SearchEngine.cpp controller/SearchEngine.h
 )
 target_include_directories(scapms_core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_compile_options(scapms_core PRIVATE -Wall -Wextra)
