@@ -6,6 +6,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
 
 find_package(SQLite3 REQUIRED)
+find_package(Qt6 QUIET COMPONENTS Widgets)
+if (Qt6_FOUND)
+    set(QT_WIDGETS Qt6::Widgets)
+else()
+    find_package(Qt5 REQUIRED COMPONENTS Widgets)
+    set(QT_WIDGETS Qt5::Widgets)
+endif()
 
 add_library(scapms_core STATIC
     model/Appointment.cpp model/Appointment.h
@@ -27,3 +34,23 @@ add_library(scapms_core STATIC
 target_include_directories(scapms_core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_compile_options(scapms_core PRIVATE -Wall -Wextra)
 target_link_libraries(scapms_core PUBLIC SQLite::SQLite3)
+
+add_executable(scapms
+    main.cpp
+    gui/Theme.h
+    gui/Widgets.cpp gui/Widgets.h
+    gui/Panel.cpp gui/Panel.h
+    gui/PatientTable.cpp gui/PatientTable.h
+    gui/PatientPicker.cpp gui/PatientPicker.h
+    gui/PatientForm.cpp gui/PatientForm.h
+    gui/PatientPanel.cpp gui/PatientPanel.h
+    gui/AppointmentPanel.cpp gui/AppointmentPanel.h
+    gui/QueuePanel.cpp gui/QueuePanel.h
+    gui/SearchPanel.cpp gui/SearchPanel.h
+    gui/ReportsPanel.cpp gui/ReportsPanel.h
+    gui/AdminPanel.cpp gui/AdminPanel.h
+    gui/DashboardPanel.cpp gui/DashboardPanel.h
+    gui/MainWindow.cpp gui/MainWindow.h
+)
+target_link_libraries(scapms PRIVATE scapms_core ${QT_WIDGETS} SQLite::SQLite3)
+target_compile_options(scapms PRIVATE -Wall -Wextra)
